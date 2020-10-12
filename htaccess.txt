@@ -1,0 +1,15 @@
+# Impedir que se pueda ver el listado de contenidos de un directorio
+
+Options All -Indexes
+
+# Url Amigables
+
+RewriteEngine On
+
+RewriteRule ^([-a-zA-Z0-9ñÑ_/]+)$ index.php?ruta=$1
+
+
+#RewriteCond %{HTTP_HOST} ^$ [OR]
+#RewriteCond %{HTTP_HOST} ^www\.#dominio.com.pe$ 
+#RewriteCond %{HTTPS} !on 
+#RewriteRule ^(.*)$ https://dominio.com.pe/$1 [R=301,L,NE]
